@@ -2,7 +2,7 @@ from bot import Bot
 from pyrogram import filters
 from presets import Presets
 from pyrogram.types import CallbackQuery
-from suport.buttons import help_button, back_button, start_button
+from suport.buttons import help_button, back_button, start_button, year1
 
 
 @Bot.on_callback_query(filters.regex(r'^start_btn$'))
@@ -10,6 +10,10 @@ async def help_start_button(c: Bot, cb: CallbackQuery):
     await cb.answer()
     await cb.message.edit(Presets.SUB, reply_markup=start_button)
 
+@Bot.on_callback_query(filters.regex(r'^year1$'))
+async def help_year1_button(c: Bot, cb: CallbackQuery):
+    await cb.answer()
+    await cb.message.edit(Presets.SUB, reply_markup=year1)
 
 @Bot.on_callback_query(filters.regex(r'^close_btn$'))
 async def close_button(c: Bot, cb: CallbackQuery):
