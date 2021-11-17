@@ -10,7 +10,7 @@ async def get_chat(client, search):
     """
     count = int()
     results = []
-    filter_docs = ('.mp4', '.mkv', '.avi', '.webp', '.pdf')
+    filter_docs = ('.mp4', '.mkv', '.avi', '.webp')
     #
     for channel in channels:
         try:
