@@ -11,7 +11,7 @@ else:
 class User(Client):
     def __init__(self):
         super().__init__(
-            Config.TG_USER_SESSION
+            Config.TG_USER_SESSION,
             api_hash=Config.API_HASH,
             api_id=Config.APP_ID,
             workers=4
